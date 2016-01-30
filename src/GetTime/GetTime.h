@@ -8,7 +8,7 @@ private:
 	time_t current;
 	tm *local;
 
-	string years;
+	string h_years;
 	string months;
 	string week;
 	string days;
@@ -16,7 +16,7 @@ private:
 	string minutes;
 	string seconds;
 
-	string now_year;
+	string now_h_year;
 	string now_time;
 
 public:
