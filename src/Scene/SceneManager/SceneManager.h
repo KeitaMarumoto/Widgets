@@ -1,15 +1,15 @@
 #pragma once
 #include "../../Singleton.h"
-#include "../Title/Title.h"
-#include "../GameMain/GameMain.h"
-#include "../Result/Result.h"
+#include "../Start/Start.h"
+#include "../Clock/Clock.h"
+#include "../Alarm/Alarm.h"
 
 class SceneManager
 {
 private:
-	Title title;
-	GameMain gamemain;
-	Result result;
+	Start start;
+	Clock clock;
+	Alarm alarm;
 	SceneName scene;
 
 public:

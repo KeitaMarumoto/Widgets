@@ -1,11 +1,12 @@
 #pragma once
 #include "../../Singleton.h"
-class Result
+
+class Start
 {
 private:
 
 public:
-	Result();
+	Start();
 	void Update();
 	void Draw();
 	SceneName Shift();

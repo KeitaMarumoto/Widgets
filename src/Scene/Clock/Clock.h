@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include "../../Singleton.h"
-class GameMain
+class Clock
 {
 private:
 
 public:
-	GameMain();
+	Clock();
 	void Update();
 	void Draw();
 	SceneName Shift();

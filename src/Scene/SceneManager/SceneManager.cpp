@@ -2,22 +2,22 @@
 
 SceneManager::SceneManager()
 {
-	scene = SceneName::TITLE;
+	scene = SceneName::START;
 }
 
 void SceneManager::Update()
 {
 	switch (scene) {
-	case SceneName::TITLE:
-		title.Update();
+	case SceneName::START:
+		start.Update();
 		break;
 
-	case SceneName::GAMEMAIN:
-		gamemain.Update();
+	case SceneName::CLOCK:
+		clock.Update();
 		break;
 
-	case SceneName::RESULT:
-		result.Update();
+	case SceneName::ALARM:
+		alarm.Update();
 		break;
 	}
 }
@@ -25,16 +25,16 @@ void SceneManager::Update()
 void SceneManager::Draw()
 {
 	switch (scene) {
-	case SceneName::TITLE:
-		title.Draw();
+	case SceneName::START:
+		start.Draw();
 		break;
 
-	case SceneName::GAMEMAIN:
-		gamemain.Draw();
+	case SceneName::CLOCK:
+		clock.Draw();
 		break;
 
-	case SceneName::RESULT:
-		result.Draw();
+	case SceneName::ALARM:
+		alarm.Draw();
 		break;
 	}
 }
@@ -42,16 +42,16 @@ void SceneManager::Draw()
 void SceneManager::Shift()
 {
 	switch (scene) {
-	case SceneName::TITLE:
-		scene = title.Shift();
+	case SceneName::START:
+		scene = start.Shift();
 		break;
 
-	case SceneName::GAMEMAIN:
-		scene = gamemain.Shift();
+	case SceneName::CLOCK:
+		scene = clock.Shift();
 		break;
 
-	case SceneName::RESULT:
-		scene = result.Shift();
+	case SceneName::ALARM:
+		scene = alarm.Shift();
 		break;
 	}
 }

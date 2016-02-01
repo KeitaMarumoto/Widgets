@@ -11,8 +11,8 @@ using namespace std;
 
 enum Window 
 {
-	WIDTH = 512,
-	HEIGHT = 512
+	WIDTH = 720,
+	HEIGHT = 480
 };
 
 
@@ -28,9 +28,11 @@ public:
 
 enum class SceneName
 {
-	TITLE,
-	GAMEMAIN,
-	RESULT
+	START,
+	CLOCK,
+	ALARM,
+	FADE_IN,
+	FADE_OUT
 };
 
 enum WeekDay

@@ -1,12 +1,11 @@
 #pragma once
 #include "../../Singleton.h"
-
-class Title
+class Alarm
 {
 private:
 
 public:
-	Title();
+	Alarm();
 	void Update();
 	void Draw();
 	SceneName Shift();
