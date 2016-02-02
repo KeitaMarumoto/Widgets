@@ -1,6 +1,18 @@
 ﻿#pragma once
 #include "../Singleton.h"
 
+//Getした時間を文字列として格納する変数群
+struct StrTimes
+{
+	string h_years;
+	string months;
+	string week;
+	string days;
+	string hours;
+	string minutes;
+	string seconds;
+};
+
 //一つの塊としてまとめた文字列群
 //及びそのPosとSize
 struct NowTimes 
@@ -16,18 +28,7 @@ struct NowTimes
 	Vec2f time_size;
 	Vec2f year_size;
 	Vec2f wday_size;
-};
-
-//Getした時間を文字列として格納する変数群
-struct StrTimes 
-{
-	string h_years;
-	string months;
-	string week;
-	string days;
-	string hours;
-	string minutes;
-	string seconds;
+	Vec2f sec_size;
 };
 
 class GetTime {

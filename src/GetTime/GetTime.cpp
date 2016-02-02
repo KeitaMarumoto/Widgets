@@ -19,19 +19,23 @@ void GetTime::Update()
 void GetTime::Draw()
 {
 	font.read("res/SAO_font.otf");
-	font.size(100);
-
-	//時間描画
-	font.draw(now.time, Vec2f(-100.0f, 0.0f), Color::white);
+	font.size(150);
 	now.time_size = font.drawSize(now.time);
 
-	//年描画
-	font.draw(now.h_year, Vec2f(0.0f, 100.0f), Color::white);
+	//時間描画
+	font.draw(now.time, Vec2f(-now.time_size.x() / 2, -now.time_size.y() / 2), Color::white);
 
-	font.size(60);
+	font.size(75);
+	now.year_size = font.drawSize(now.h_year);
+
+	//年描画
+	font.draw(now.h_year, Vec2f(-now.year_size.x() / 2, (now.time_size.y() / 2) + 20), Color::white);
+
+	font.size(85);
+	now.sec_size = font.drawSize(now.second);
 
 	//秒描画
-	font.draw(now.second, Vec2f(-100.0f + now.time_size.x(), 0.0f), Color::white);
+	font.draw(now.second, Vec2f(-now.sec_size.x() / 2, (-now.time_size.y() / 2) - (now.sec_size.y() + 20)), Color::white);
 }
 
 void GetTime::ChangeTime()
@@ -92,9 +96,9 @@ void GetTime::Combine()
 	
 	//秒表示(1桁の時は0を前に入れる)
 	if (local->tm_sec < 10) {
-		now.second = " 0" + str.seconds;
+		now.second = "0" + str.seconds;
 	}
 	else {
-		now.second = " " + str.seconds;
+		now.second = str.seconds;
 	}
 }
