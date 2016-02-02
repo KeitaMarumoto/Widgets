@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include "../Singleton.h"
 
-//ˆê‚Â‚Ì‰ò‚Æ‚µ‚Ä‚Ü‚Æ‚ß‚½•¶š—ñŒQ
-//‹y‚Ñ‚»‚ÌPos‚ÆSize
+//ä¸€ã¤ã®å¡Šã¨ã—ã¦ã¾ã¨ã‚ãŸæ–‡å­—åˆ—ç¾¤
+//åŠã³ãã®Posã¨Size
 struct NowTimes 
 {
 	string time;
@@ -18,7 +18,7 @@ struct NowTimes
 	Vec2f wday_size;
 };
 
-//Get‚µ‚½ŠÔ‚ğ•¶š—ñ‚Æ‚µ‚ÄŠi”[‚·‚é•Ï”ŒQ
+//Getã—ãŸæ™‚é–“ã‚’æ–‡å­—åˆ—ã¨ã—ã¦æ ¼ç´ã™ã‚‹å¤‰æ•°ç¾¤
 struct StrTimes 
 {
 	string h_years;
